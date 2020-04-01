@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
-    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body class="body-size">
 <div class="wrapper">
     <div class="side-menu">
         <img src="../image/111.jpg">
-        <p>Mahbubul Alam</p>
+        <p>James Ma</p>
         <nav>
             <ul class="main-ul">
                 <li><a href="home.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
-    <div class="item content">
-        <h1>Location</h1>
-        <p>Niketon, Gulshan-1, Dhaka-1212, Bangladesh.</p>
-        <h1>Contact No.</h1>
-        <p>+8801918845404</p>
-        <h1>e-mail</h1>
-        <p>alam.diu13@gmail.com</p>
+    <div class="container content">
+      <form action="https://formspree.io/xgezqvzd" method="POST">
+        <div class="row">
+          <label for="text">Name:</label>
+          <input type="text" placeholder="Your Name" id="text">
+        </div>
+        <div class="row">
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Email" id="email">
+        </div>
+        <div class="row">
+          <label for="message">Message:</label>
+          <textarea type="message" id="message"></textarea> 
+        </div>
+        <div class="b-submit">
+          <input type="submit" class="btn btn-outline-warning btn-lg" value="Submit">
+        </div>
+      </form>
     </div>
-    <div class="item footer">
+
+    <div class="footer">
         <footer>
             <ul class="footer-ul">
                 <li>

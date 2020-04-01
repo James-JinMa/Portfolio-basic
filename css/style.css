@@ -1,0 +1,469 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 5fr 1fr;
+
+    grid-template-areas:
+            "side-menu content"
+            ". footer";
+}
+
+.wrapper-blog{
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 10% 70%;
+    grid-template-rows: 5fr 1fr;
+
+    grid-template-areas:
+            "side-menu content"
+            ".blog-page"
+            ".blog-main"
+            ".footer";
+}
+
+.side-menu{
+    text-align: center;
+    padding: 50px;
+    grid-area:side-menu;
+    grid-row: 1/3;
+    background: linear-gradient(rgb(55, 65, 65), lightgray );
+}
+
+.content{
+    padding: 100px 0 0 50px;
+    grid-area: content;
+    background: url("../image/background1.jpg");
+    text-align: left;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.footer{
+    grid-area: footer;
+    background: ghostwhite;
+
+}
+
+.main-ul{
+    margin: auto;
+    padding: 150px 0 0 0;
+    list-style-type: none;
+
+}
+
+
+.main-ul li{
+    height: 50px;
+    text-align: center;
+    transition: 1s;
+
+}
+
+.main-ul li:hover{
+    transform: scale(1.3);
+}
+
+
+.main-ul li a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.main-ul li a:hover{
+    opacity: 2;
+}
+
+.side-menu img{
+    margin: auto;
+    height: 155px;
+    width: 155px;
+    border-radius: 100px;
+    display: block;
+    border: 1px solid;
+}
+
+.side-menu p{
+    padding-top: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+@media screen and (min-width: 1025px){
+    .content h1{
+        font-weight: 300;
+        color: #373d46;
+        animation: animeh1;
+        animation-duration: 2s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @keyframes animeh1 {
+        0%{width: 0ch;}
+        100%{width: 21ch;}
+
+    }
+    .content p{
+        font-weight: 300;
+        color: #373d46;
+        animation: animep 3s;
+        overflow: hidden;
+
+    }
+
+    @keyframes animep {
+        0%{
+            opacity: 0;
+            filter: blur(0px);
+        }
+
+        100%{
+            opacity: 1;
+            filter: blur(0px);
+        }
+
+    }
+
+}
+
+
+
+.footer-ul{
+    padding:50px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.footer-ul li{
+    transition: 1s;
+}
+
+.footer-ul li:hover{
+    transform: scale(1.3);
+}
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+    .wrapper{
+        font-size: 30px;
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+                "side-menu"
+                "content"
+                "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 1050px 193px;
+    }
+
+    .main-ul{
+        padding: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .content{
+        padding: 50px;
+        text-align: center;
+    }
+
+    .footer-ul {
+        padding: 60px;
+    }
+
+
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+
+input[type=text] {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 8px;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 20px;
+}
+
+input[type="email"] {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 8px;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 20px;
+}
+
+textarea[type="message"] {
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 3%;
+    margin: 8px;
+    box-sizing: border-box;
+    text-align: top;
+    font-size: 20px;
+}
+
+.btn {
+    margin: 8px !important;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border:1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    /* overflow: visible; */
+}
+
+.btn:hover {
+  background: rgb(104, 107, 113);
+  color: white;
+}
+
+.btn-lg{
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.btn-outline-warning {
+    color: #605e5a;
+    border-color: #464541;
+}
+
+.label{
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.b-submit{
+  text-align: center;
+}
+
+
+
+/* blog */
+
+/* .wrapper-blog{
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 10% 70%;
+    grid-template-rows: 5fr 1fr;
+
+    grid-template-areas:
+            "side-menu content"
+            ".blog-page"
+            ".blog-main"
+            ".footer";
+} */
+
+.blog-list {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-top: 50%;
+    top: 15px;
+    left: 15px;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 5px 5px 5px;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.blog-ul{
+    list-style-type: none;
+}
+
+.blog-page{
+  grid-column: 2/3;
+  width: auto;
+  height: auto;
+}
+
+.blog-main{
+  grid-column: 3/4;
+  width: auto;
+  height: auto;
+}
+
+#vic .blog-img{
+  background-image: url(/Design/portfolio-html-css/image/melbourne.jpg);
+}
+#tas .blog-img{
+  background-image: url(/Design/portfolio-html-css/image/tas.jpg);
+}
+#nsw .blog-img{
+  background-image: url(/Design/portfolio-html-css/image/nsw.jpg);
+}
+#qld .blog-img{
+  background-image: url(/Design/portfolio-html-css/image/qld.jpg);
+}
+#sa .blog-img{
+  background-image: url(/Design/portfolio-html-css/image/sa.jpg);
+}
+
+.blog-img {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: auto;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.blog-article{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.blog-title, .blog-date{
+  display: inline;
+}
+.blog-title{
+  margin-right: 15px;
+}
+/* .blog-list {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    font-size: 20px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 8em;
+    margin-top: -2.5em;
+} */
+
+/* slider */
+
+.slider {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/* border: 1px solid black; */
+}
+
+.slider .slide {
+	position: relative;
+	flex: 1;
+	border-right: 2px solid black;
+	transition: all 0.5s ease-in-out;
+	overflow: hidden;
+}
+
+.slider .slide:hover {
+	flex-grow: 5;
+}
+
+.slider .slide:last-child {
+	border-right: none;
+}
+
+.slider .slide:nth-child(1) {
+	background: url("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=blur-close-up-code-computer-546819.jpg&fm=jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.slider .slide:nth-child(2) {
+	background: url("https://images.pexels.com/photos/839465/pexels-photo-839465.jpeg?cs=srgb&dl=person-touching-open-macbook-on-table-839465.jpg&fm=jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.slider .slide:nth-child(3) {
+	background: url("https://images.pexels.com/photos/371285/pexels-photo-371285.jpeg?cs=srgb&dl=adult-affection-beads-blur-371285.jpg&fm=jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.slider .slide:nth-child(4) {
+	background: url("https://images.pexels.com/photos/1090932/pexels-photo-1090932.jpeg?cs=srgb&dl=green-leafed-trees-1090932.jpg&fm=jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.slider .slide:nth-child(5) {
+	background: url("https://images.pexels.com/photos/1262302/pexels-photo-1262302.jpeg?cs=srgb&dl=man-holding-ice-cream-cone-under-cloud-1262302.jpg&fm=jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.slider .slide .slide-content {
+	position: absolute;
+	bottom: 0;
+	margin: 40px;
+	padding: 30px;
+	background-color: transparent;
+	color: snow;
+	visibility: none;
+	opacity: 0;
+	transform: translateX(100px);
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.slider .slide:hover .slide-content {
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+	transition-delay: 0.5s;
+	transform: translateY(0px);
+}
+
+.resume{
+   color: brown;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-style: oblique;
+}
