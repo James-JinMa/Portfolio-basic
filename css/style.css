@@ -338,19 +338,19 @@ textarea[type="message"] {
 }
 
 #vic .blog-img{
-  background-image: url(/Design/portfolio-html-css/image/melbourne.jpg);
+  background-image: url(/image/melbourne.jpg);
 }
 #tas .blog-img{
-  background-image: url(/Design/portfolio-html-css/image/tas.jpg);
+  background-image: url(/image/tas.jpg);
 }
 #nsw .blog-img{
-  background-image: url(/Design/portfolio-html-css/image/nsw.jpg);
+  background-image: url(/image/nsw.jpg);
 }
 #qld .blog-img{
-  background-image: url(/Design/portfolio-html-css/image/qld.jpg);
+  background-image: url(/image/qld.jpg);
 }
 #sa .blog-img{
-  background-image: url(/Design/portfolio-html-css/image/sa.jpg);
+  background-image: url(/image/sa.jpg);
 }
 
 .blog-img {
